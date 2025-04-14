@@ -5,12 +5,10 @@ SRC_DIR = src/
 INC_DIR = inc/
 
 SRCS = $(SRC_DIR)push_swap.c \
-       $(SRC_DIR)operations.c \
-       $(SRC_DIR)utils.c \
-       $(SRC_DIR)sort_small.c \
-       $(SRC_DIR)sort_large.c \
-       $(SRC_DIR)stack_operations.c
-
+       $(SRC_DIR)ops_swap.c \
+	   $(SRC_DIR)ops_push_rotate.c \
+	   $(SRC_DIR)ops_reverse_rotate.c \
+       $(SRC_DIR)stack.c
 OBJS = $(SRCS:%.c=%.o)
 
 $(NAME): $(OBJS)
