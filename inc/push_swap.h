@@ -6,7 +6,7 @@
 /*   By: enpardo- <enpardo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 20:24:37 by enpardo-          #+#    #+#             */
-/*   Updated: 2025/04/14 19:45:44 by enpardo-         ###   ########.fr       */
+/*   Updated: 2025/04/14 19:50:06 by enpardo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct s_stack
 	t_node			*top;
 	int				size;
 }					t_stack;
+
 // stack.c
 t_node				*new_node(int value);
 void				append_node(t_stack *stack, t_node *node);
