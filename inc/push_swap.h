@@ -6,54 +6,63 @@
 /*   By: enpardo- <enpardo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 20:24:37 by enpardo-          #+#    #+#             */
-/*   Updated: 2025/04/14 19:50:06 by enpardo-         ###   ########.fr       */
+/*   Updated: 2025/04/15 19:15:11 by enpardo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include <stdlib.h>
 # include <unistd.h>
-
-typedef struct s_node
-{
-	int				value;
-	int				index;
-	struct s_node	*next;
-}					t_node;
+# include <stdlib.h>
+# include <limits.h>
 
 typedef struct s_stack
 {
-	t_node			*top;
-	int				size;
-}					t_stack;
+	int				value;
+	int				index;
+	struct s_stack	*next;
+}	t_stack;
 
-// stack.c
-t_node				*new_node(int value);
-void				append_node(t_stack *stack, t_node *node);
-t_stack				*init_stack(void);
-void				free_stack(t_stack *stack);
-int					is_sorted(t_stack *stack);
-// ops_swap.c
-void				swap(t_stack *stack);
-void				sa(t_stack *a);
-void				sb(t_stack *b);
-void				ss(t_stack *a, t_stack *b);
-void				push(t_stack *dest, t_stack *src);
+// Stack operations
+void	sa(t_stack **a);
+void	sb(t_stack **b);
+void	ss(t_stack **a, t_stack **b);
+void	pa(t_stack **a, t_stack **b);
+void	pb(t_stack **a, t_stack **b);
+void	ra(t_stack **a);
+void	rb(t_stack **b);
+void	rr(t_stack **a, t_stack **b);
+void	rra(t_stack **a);
+void	rrb(t_stack **b);
+void	rrr(t_stack **a, t_stack **b);
 
-// ops_push_rotate.c
-void				pa(t_stack *a, t_stack *b);
-void				pb(t_stack *b, t_stack *a);
-void				rotate(t_stack *stack);
-void				ra(t_stack *a);
-void				rb(t_stack *b);
+// Stack utils
+t_stack	*ft_stacknew(int value);
+void	ft_stackadd_front(t_stack **stack, t_stack *new);
+int		ft_stacksize(t_stack *stack);
+void	free_stack(t_stack **stack);
+int		is_sorted(t_stack *stack);
 
-// ops_reverse_rotate.c
-void				reverse_rotate(t_stack *stack);
-void				rra(t_stack *a);
-void				rrb(t_stack *b);
-void				rr(t_stack *a, t_stack *b);
-void				rrr(t_stack *a, t_stack *b);
+// Sorting
+void	sort_three(t_stack **a);
+void	sort_five(t_stack **a, t_stack **b);
+void	big_sort(t_stack **a, t_stack **b);
+
+// Input validation
+int		is_valid_input(char **av);
+int		has_duplicates(t_stack *a);
+
+// Radix utils
+int		get_max_bits(int size);
+void	push_all_back(t_stack **a, t_stack **b);
+void	process_bit(t_stack **a, t_stack **b, int bit_pos, int size);
+
+// Utils
+int		ft_atoi(const char *str);
+long	ft_atol(const char *str);
+int		ft_isdigit(int c);
+void	ft_putstr_fd(char *s, int fd);
+void	assign_indexes(t_stack *a);
 
 #endif

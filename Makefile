@@ -1,25 +1,31 @@
-NAME = push_swap.a
+NAME = push_swap
+
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -I./inc
-SRC_DIR = src/
-INC_DIR = inc/
+SRC_DIR = src
+INC_DIR = inc
 
-SRCS = $(SRC_DIR)push_swap.c \
-       $(SRC_DIR)ops_swap.c \
-	   $(SRC_DIR)ops_push_rotate.c \
-	   $(SRC_DIR)ops_reverse_rotate.c \
-       $(SRC_DIR)stack.c
-OBJS = $(SRCS:%.c=%.o)
+SRC = $(SRC_DIR)/push_swap.c \
+      $(SRC_DIR)/stack_operations.c \
+      $(SRC_DIR)/stack_utils.c \
+      $(SRC_DIR)/sorting.c \
+      $(SRC_DIR)/input_validation.c \
+      $(SRC_DIR)/utils.c \
+	  $(SRC_DIR)/radix_utils.c
 
-$(NAME): $(OBJS)
-	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+OBJ = $(SRC:.c=.o)
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 	@echo "Executable $(NAME) created."
 
 %.o: %.c
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	@rm -rf $(OBJS)
+	@rm -f $(OBJ)
 	@echo "Object files cleaned."
 
 fclean: clean
@@ -27,7 +33,5 @@ fclean: clean
 	@echo "Executable $(NAME) and object files cleaned."
 
 re: fclean all
-
-all: $(NAME)
 
 .PHONY: all clean fclean re
