@@ -1,5 +1,3 @@
-# Makefile - raíz del proyecto push_swap
-
 NAME = push_swap
 
 CC = cc
