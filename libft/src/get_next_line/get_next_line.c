@@ -6,11 +6,11 @@
 /*   By: enpardo- <enpardo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 20:09:44 by enpardo-          #+#    #+#             */
-/*   Updated: 2025/05/13 10:42:50 by enpardo-         ###   ########.fr       */
+/*   Updated: 2025/05/13 10:59:02 by enpardo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../get_next_line.h"
+#include "../../inc/get_next_line.h"
 
 static char	*read_and_store(int fd, char *storage)
 {
