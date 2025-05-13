@@ -3,54 +3,51 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror -I../inc
 
 SRCS = \
-		ft_atoi.c \
-		ft_bzero.c \
-		ft_calloc.c \
-		ft_isalnum.c \
-		ft_isalpha.c \
-		ft_isascii.c \
-		ft_isdigit.c \
-		ft_isprint.c \
-		ft_itoa.c \
-		ft_memchr.c \
-		ft_memcmp.c \
-		ft_memcpy.c \
-		ft_memmove.c \
-		ft_memset.c \
-		ft_putchar_fd.c \
-		ft_putendl_fd.c \
-		ft_putnbr_fd.c \
-		ft_putstr_fd.c \
-		ft_split.c \
-		ft_strchr.c \
-		ft_strdup.c \
-		ft_striteri.c \
-		ft_strjoin.c \
-		ft_strlcat.c \
-		ft_strlcpy.c \
-		ft_strlen.c \
-		ft_strmapi.c \
-		ft_strncmp.c \
-		ft_strnstr.c \
-		ft_strrchr.c \
-		ft_strtrim.c \
-		ft_substr.c \
-		ft_tolower.c \
-		ft_toupper.c
-
-SRCLST = \
-		ft_lstadd_back.c \
-		ft_lstadd_front.c \
-		ft_lstclear.c \
-		ft_lstdelone.c \
-		ft_lstiter.c \
-		ft_lstlast.c \
-		ft_lstmap.c \
-		ft_lstnew.c \
-		ft_lstsize.c
+	src/ft_alloc/ft_bzero.c \
+	src/ft_alloc/ft_calloc.c \
+	src/ft_alloc/ft_split.c \
+	src/ft_alloc/ft_substr.c \
+	src/ft_char/ft_isalnum.c \
+	src/ft_char/ft_isalpha.c \
+	src/ft_char/ft_isascii.c \
+	src/ft_char/ft_isdigit.c \
+	src/ft_char/ft_isprint.c \
+	src/ft_conv/ft_atoi.c \
+	src/ft_conv/ft_itoa.c \
+	src/ft_conv/ft_tolower.c \
+	src/ft_conv/ft_toupper.c \
+	src/ft_lst/ft_lstadd_back.c \
+	src/ft_lst/ft_lstadd_front.c \
+	src/ft_lst/ft_lstclear.c \
+	src/ft_lst/ft_lstdelone.c \
+	src/ft_lst/ft_lstiter.c \
+	src/ft_lst/ft_lstlast.c \
+	src/ft_lst/ft_lstmap.c \
+	src/ft_lst/ft_lstnew.c \
+	src/ft_lst/ft_lstsize.c \
+	src/ft_mem/ft_memchr.c \
+	src/ft_mem/ft_memcmp.c \
+	src/ft_mem/ft_memcpy.c \
+	src/ft_mem/ft_memmove.c \
+	src/ft_mem/ft_memset.c \
+	src/ft_put/ft_putchar_fd.c \
+	src/ft_put/ft_putendl_fd.c \
+	src/ft_put/ft_putnbr_fd.c \
+	src/ft_put/ft_putstr_fd.c \
+	src/ft_str/ft_strchr.c \
+	src/ft_str/ft_strdup.c \
+	src/ft_str/ft_striteri.c \
+	src/ft_str/ft_strjoin.c \
+	src/ft_str/ft_strlcat.c \
+	src/ft_str/ft_strlcpy.c \
+	src/ft_str/ft_strlen.c \
+	src/ft_str/ft_strmapi.c \
+	src/ft_str/ft_strncmp.c \
+	src/ft_str/ft_strnstr.c \
+	src/ft_str/ft_strrchr.c \
+	src/ft_str/ft_strtrim.c
 
 OBJS = $(SRCS:.c=.o)
-OBJSLST = $(SRCLST:.c=.o)
 
 all: $(NAME)
 
@@ -58,13 +55,8 @@ $(NAME): $(OBJS)
 	@ar rcs $(NAME) $(OBJS)
 	@echo "Library $(NAME) created."
 
-lists:
-	@$(CC) $(CFLAGS) -c $(SRCLST)
-	@ar rcs $(NAME) $(OBJS) $(OBJSLST)
-	@echo "Library $(NAME) with lists created."
-
 clean:
-	@rm -f $(OBJS) $(OBJSLST)
+	@rm -f $(OBJS)
 	@echo "Object files cleaned."
 
 fclean: clean
