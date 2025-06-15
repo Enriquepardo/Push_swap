@@ -8,14 +8,20 @@ INC_DIR = inc
 LIBFT_DIR = src/libft/src
 LIBFT = $(LIBFT_DIR)/libft.a
 
-SRC = $(SRC_DIR)/push_swap.c \
-      $(SRC_DIR)/stack_operations.c \
-      $(SRC_DIR)/stack_utils.c \
-      $(SRC_DIR)/sorting.c \
-      $(SRC_DIR)/input_validation.c \
-      $(SRC_DIR)/quick_sort.c \
-      $(SRC_DIR)/utils.c \
-      $(SRC_DIR)/radix_utils.c
+SRC = $(SRC_DIR)/push_swap/ft_split.c \
+      $(SRC_DIR)/push_swap/handle_errors.c \
+      $(SRC_DIR)/push_swap/init_a_to_b.c \
+      $(SRC_DIR)/push_swap/init_b_to_a.c \
+      $(SRC_DIR)/push_swap/push_swap.c \
+      $(SRC_DIR)/push_swap/stack_init.c \
+      $(SRC_DIR)/push_swap/stack_utils.c \
+      $(SRC_DIR)/commands/push.c \
+	  $(SRC_DIR)/commands/rev_rotate.c \
+	  $(SRC_DIR)/commands/rotate.c \
+	  $(SRC_DIR)/commands/sort_stack.c \
+	  $(SRC_DIR)/commands/sort_stack_utils.c \
+	  $(SRC_DIR)/commands/sort_three.c \
+	  $(SRC_DIR)/commands/swap.c 
 
 OBJ = $(SRC:.c=.o)
 
