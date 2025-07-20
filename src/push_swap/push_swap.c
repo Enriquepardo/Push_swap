@@ -6,7 +6,7 @@
 /*   By: enpardo- <enpardo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/17 15:40:53 by enpardo-          #+#    #+#             */
-/*   Updated: 2025/06/15 22:25:39 by enpardo-         ###   ########.fr       */
+/*   Updated: 2025/07/20 22:02:51 by enpardo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	main(int argc, char **argv)
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
 		return (1);
 	else if (argc == 2)
-		split_array = split(argv[1], ' ');
+		split_array = ft_split(argv[1], ' ');
 	init_stack_a(&a, split_array + 1, &error_flag);
 	if (!stack_sorted(a) && !error_flag)
 	{

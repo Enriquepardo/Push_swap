@@ -6,11 +6,11 @@
 /*   By: enpardo- <enpardo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 13:09:09 by enpardo-          #+#    #+#             */
-/*   Updated: 2025/05/08 21:32:38 by enpardo-         ###   ########.fr       */
+/*   Updated: 2025/07/20 21:33:45 by enpardo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "../../inc/libft.h"
 
 static int	count_digits(int n)
 {

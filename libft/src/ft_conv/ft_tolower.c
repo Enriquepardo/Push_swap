@@ -6,11 +6,11 @@
 /*   By: enpardo- <enpardo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 21:15:57 by enpardo-          #+#    #+#             */
-/*   Updated: 2025/05/08 21:21:01 by enpardo-         ###   ########.fr       */
+/*   Updated: 2025/07/20 21:33:47 by enpardo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "../../inc/libft.h"
 
 int	ft_tolower(int c)
 {

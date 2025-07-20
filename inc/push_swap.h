@@ -6,7 +6,7 @@
 /*   By: enpardo- <enpardo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 20:24:37 by enpardo-          #+#    #+#             */
-/*   Updated: 2025/06/15 22:35:19 by enpardo-         ###   ########.fr       */
+/*   Updated: 2025/07/20 22:04:07 by enpardo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,23 +27,23 @@ typedef struct s_stack
 	int					push_cost;
 	bool				above_median;
 	bool				cheapest;
-	struct s_stack_node	*target_node;
-	struct s_stack_node	*next;
-	struct s_stack_node	*prev;
+	struct s_stack	*target_node;
+	struct s_stack	*next;
+	struct s_stack	*prev;
 }						t_stack;
 
 // Stack operations
-void					sa(t_stack **a);
-void					sb(t_stack **b);
-void					ss(t_stack **a, t_stack **b);
-void					pa(t_stack **a, t_stack **b);
-void					pb(t_stack **a, t_stack **b);
-void					ra(t_stack **a);
-void					rb(t_stack **b);
-void					rr(t_stack **a, t_stack **b);
-void					rra(t_stack **a);
-void					rrb(t_stack **b);
-void					rrr(t_stack **a, t_stack **b);
+void					sa(t_stack **a, bool print);
+void					sb(t_stack **b, bool print);
+void					ss(t_stack **a, t_stack **b, bool print);
+void					pa(t_stack **a, t_stack **b, bool print);
+void					pb(t_stack **a, t_stack **b, bool print);
+void					ra(t_stack **a, bool print);
+void					rb(t_stack **b, bool print);
+void					rr(t_stack **a, t_stack **b, bool print);
+void					rra(t_stack **a, bool print);
+void					rrb(t_stack **b, bool print);
+void					rrr(t_stack **a, t_stack **b, bool print);
 
 // Handle errors
 int						error_syntax(char *str_n);
@@ -58,7 +58,6 @@ void					sort_stacks(t_stack **a, t_stack **b);
 
 // Utils
 int						ft_atoi(const char *str);
-long					ft_atol(const char *str);
 int						ft_isdigit(int c);
 void					ft_putstr_fd(char *s, int fd);
 char					**ft_split(char const *s, char c);

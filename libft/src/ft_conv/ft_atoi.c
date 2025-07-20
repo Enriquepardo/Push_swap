@@ -6,11 +6,11 @@
 /*   By: enpardo- <enpardo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 21:03:58 by enpardo-          #+#    #+#             */
-/*   Updated: 2025/05/08 21:14:12 by enpardo-         ###   ########.fr       */
+/*   Updated: 2025/07/20 21:33:43 by enpardo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "../../inc/libft.h"
 
 int	ft_atoi(const char *str)
 {
