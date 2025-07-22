@@ -44,7 +44,6 @@ SRC = $(SRC_DIR)/push_swap/handle_errors.c \
 	  $(LIBFT_DIR)/src/ft_lst/ft_lstnew.c \
 	  $(LIBFT_DIR)/src/ft_lst/ft_lstsize.c \
 	  $(LIBFT_DIR)/src/ft_mem/ft_memchr.c \
-	  $(LIBFT_DIR)/src/ft_mem/ft_memchr.c \
 	  $(LIBFT_DIR)/src/ft_mem/ft_memcmp.c \
 	  $(LIBFT_DIR)/src/ft_mem/ft_memcpy.c \
 	  $(LIBFT_DIR)/src/ft_mem/ft_memmove.c \
