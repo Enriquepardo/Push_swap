@@ -6,7 +6,7 @@
 /*   By: enpardo- <enpardo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/15 22:03:16 by enpardo-          #+#    #+#             */
-/*   Updated: 2025/06/15 22:07:43 by enpardo-         ###   ########.fr       */
+/*   Updated: 2025/07/23 00:55:19 by enpardo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,22 +40,24 @@ static void	set_target_a(t_stack *a, t_stack *b)
 	long	best_match_index;
 
 	while (a)
-		best_match_index = LONG_MIN;
-	current_b = b;
-	while (current_b)
 	{
-		if (current_b->nbr < a->nbr && current_b->nbr > best_match_index)
+		best_match_index = LONG_MIN;
+		current_b = b;
+		while (current_b)
 		{
-			best_match_index = current_b->nbr;
-			target_node = current_b;
+			if (current_b->nbr < a->nbr && current_b->nbr > best_match_index)
+			{
+				best_match_index = current_b->nbr;
+				target_node = current_b;
+			}
+			current_b = current_b->next;
 		}
-		current_b = current_b->next;
+		if (best_match_index == LONG_MIN)
+			a->target_node = find_max(b);
+		else
+			a->target_node = target_node;
+		a = a->next;
 	}
-	if (best_match_index == LONG_MIN)
-		a->target_node = find_max(b);
-	else
-		a->target_node = target_node;
-	a = a->next;
 }
 
 static void	cost_analysis_a(t_stack *a, t_stack *b)
