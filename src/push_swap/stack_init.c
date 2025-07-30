@@ -6,7 +6,7 @@
 /*   By: enpardo- <enpardo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/17 15:24:54 by enpardo-          #+#    #+#             */
-/*   Updated: 2025/07/20 22:03:25 by enpardo-         ###   ########.fr       */
+/*   Updated: 2025/07/30 20:49:16 by enpardo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,9 +72,9 @@ void	init_stack_a(t_stack **a, char **argv, bool *error_flag)
 	long	n;
 	int		i;
 
-	i = 0;
+	i = -1;
 	n = 0;
-	while (argv[i])
+	while (argv[++i])
 	{
 		if (error_syntax(argv[i]))
 		{
@@ -93,7 +93,6 @@ void	init_stack_a(t_stack **a, char **argv, bool *error_flag)
 			return ;
 		}
 		append_node(a, (int)n);
-		i++;
 	}
 }
 
