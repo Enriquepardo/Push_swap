@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   handle_errors.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: enpardo- <enpardo-@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: enpardo- <enpardo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/15 22:08:06 by enpardo-          #+#    #+#             */
-/*   Updated: 2025/07/30 20:59:05 by enpardo-         ###   ########.fr       */
+/*   Updated: 2025/07/31 20:36:17 by enpardo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ int	error_duplicate(t_stack *a, int n)
 
 void	free_stack(t_stack **stack)
 {
-	t_stack *tmp;
-	t_stack *current;
+	t_stack	*tmp;
+	t_stack	*current;
 
 	if (!stack)
 		return ;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: enpardo- <enpardo-@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: enpardo- <enpardo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/17 15:40:53 by enpardo-          #+#    #+#             */
-/*   Updated: 2025/07/30 20:52:45 by enpardo-         ###   ########.fr       */
+/*   Updated: 2025/07/31 20:36:40 by enpardo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,10 @@ void	handle_exit(int argc, bool error_flag, char **split_array, t_stack **a)
 
 int	main(int argc, char **argv)
 {
-	t_stack *a;
-	t_stack *b;
-	char **split_array;
-	bool error_flag;
+	t_stack	*a;
+	t_stack	*b;
+	char	**split_array;
+	bool	error_flag;
 
 	error_flag = false;
 	a = NULL;

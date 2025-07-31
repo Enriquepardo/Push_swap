@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: enpardo- <enpardo-@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: enpardo- <enpardo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 20:24:37 by enpardo-          #+#    #+#             */
-/*   Updated: 2025/07/20 22:04:07 by enpardo-         ###   ########.fr       */
+/*   Updated: 2025/07/31 20:34:06 by enpardo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ typedef struct s_stack
 	int					push_cost;
 	bool				above_median;
 	bool				cheapest;
-	struct s_stack	*target_node;
-	struct s_stack	*next;
-	struct s_stack	*prev;
+	struct s_stack		*target_node;
+	struct s_stack		*next;
+	struct s_stack		*prev;
 }						t_stack;
 
 // Stack operations

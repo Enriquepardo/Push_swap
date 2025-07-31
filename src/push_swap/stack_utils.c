@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: enpardo- <enpardo-@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: enpardo- <enpardo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/17 15:25:05 by enpardo-          #+#    #+#             */
-/*   Updated: 2025/07/30 20:52:57 by enpardo-         ###   ########.fr       */
+/*   Updated: 2025/07/31 20:37:17 by enpardo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ bool	stack_sorted(t_stack *stack)
 
 t_stack	*find_min(t_stack *stack)
 {
-	long			min;
+	long	min;
 	t_stack	*min_node;
 
 	if (!stack)
@@ -71,8 +71,8 @@ t_stack	*find_min(t_stack *stack)
 
 t_stack	*find_max(t_stack *stack)
 {
-	long max;
-	t_stack *max_node;
+	long	max;
+	t_stack	*max_node;
 
 	if (!stack)
 		return (NULL);

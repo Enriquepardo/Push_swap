@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: enpardo- <enpardo-@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: enpardo- <enpardo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/15 22:14:43 by enpardo-          #+#    #+#             */
-/*   Updated: 2025/07/30 20:58:53 by enpardo-         ###   ########.fr       */
+/*   Updated: 2025/07/31 20:34:51 by enpardo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static void	min_on_top(t_stack **a)
 
 void	sort_stacks(t_stack **a, t_stack **b)
 {
-	int len_a;
+	int	len_a;
 
 	len_a = stack_len(*a);
 	if (len_a-- > 3 && !stack_sorted(*a))

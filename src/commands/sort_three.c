@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_three.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: enpardo- <enpardo-@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: enpardo- <enpardo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/15 22:13:06 by enpardo-          #+#    #+#             */
-/*   Updated: 2025/07/30 20:58:56 by enpardo-         ###   ########.fr       */
+/*   Updated: 2025/07/31 20:35:26 by enpardo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	sort_three(t_stack **a)
 {
-	t_stack *biggest_node;
+	t_stack	*biggest_node;
 
 	biggest_node = find_max(*a);
 	if (biggest_node == *a)
